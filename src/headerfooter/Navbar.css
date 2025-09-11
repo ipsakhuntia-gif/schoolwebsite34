@@ -51,14 +51,20 @@
   left: 50%; /* center se start */
   bottom: 5px; /* text ke niche */
   width: 0;
-  height: 2px;
+  height: 1px;
   background: white;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
+<<<<<<< HEAD
 .nav-links a:hover::after {
   width: 90%;
+=======
+.nav-links a:hover::after,
+.dropbtn:hover::after {
+  width: 70%;
+>>>>>>> dac9c87b9b0802fc71cbc0841af38550ff73d0e7
 }
 
 .nav-links a:hover {
@@ -96,3 +102,39 @@
   background: #f0f0f0;
   color: #0073e6;
 }
+<<<<<<< HEAD
+=======
+
+
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.dropbtn:hover::after {
+  width: 70%;
+}
+
+.dropbtn:hover {
+  color: #ddd;
+}
+>>>>>>> dac9c87b9b0802fc71cbc0841af38550ff73d0e7
