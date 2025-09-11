@@ -60,11 +60,11 @@
 <<<<<<< HEAD
 .nav-links a:hover::after {
   width: 90%;
-=======
+
 .nav-links a:hover::after,
 .dropbtn:hover::after {
   width: 70%;
->>>>>>> dac9c87b9b0802fc71cbc0841af38550ff73d0e7
+
 }
 
 .nav-links a:hover {
@@ -102,9 +102,6 @@
   background: #f0f0f0;
   color: #0073e6;
 }
-<<<<<<< HEAD
-=======
-
 
 
 .dropbtn {
@@ -137,4 +134,3 @@
 .dropbtn:hover {
   color: #ddd;
 }
->>>>>>> dac9c87b9b0802fc71cbc0841af38550ff73d0e7
