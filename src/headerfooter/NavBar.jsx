@@ -23,14 +23,14 @@ const Navbar = () => {
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
 
-        <li
-          className="dropdown"
-          onMouseEnter={() => setActiveDropdown("about")}
-          onMouseLeave={() => setActiveDropdown(null)}
-        >
-          <Link to="/about" onClick={() => toggleDropdown("about")}>
+        {/* About Dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropbtn" 
+            onClick={() => toggleDropdown("about")}
+          >
             About ▾
-          </Link>
+          </button>
           {activeDropdown === "about" && (
             <ul className="dropdown-menu">
               <li><Link to="/about#school">About School</Link></li>
@@ -44,14 +44,14 @@ const Navbar = () => {
         <li><Link to="/admission">Admission</Link></li>
         <li><Link to="/academic">Academic</Link></li>
 
-        <li
-          className="dropdown"
-          onMouseEnter={() => setActiveDropdown("facilities")}
-          onMouseLeave={() => setActiveDropdown(null)}
-        >
-          <Link to="/facilities" onClick={() => toggleDropdown("facilities")}>
+        {/* Facilities Dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropbtn" 
+            onClick={() => toggleDropdown("facilities")}
+          >
             Facilities ▾
-          </Link>
+          </button>
           {activeDropdown === "facilities" && (
             <ul className="dropdown-menu">
               <li><Link to="/facilities#library">Library</Link></li>
