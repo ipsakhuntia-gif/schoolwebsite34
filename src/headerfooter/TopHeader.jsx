@@ -10,7 +10,7 @@ function TopHeader() {
 
       {/* Animated Text */}
       <div className="scroll-text">
-        <span >Welcome to Swaraswati Skhikendra</span>
+        <span >Welcome to Swaraswati Shikhya Mandira,Naharakanta,BBSR</span>
       </div>
 
       {/* Social Icons */}
