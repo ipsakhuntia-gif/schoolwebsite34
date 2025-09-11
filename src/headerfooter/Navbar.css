@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  color: white;
+  padding: 0 30px;   /* ✅ left-right padding set kiya */
+  box-sizing: border-box; /* ✅ overflow/scrollbar prevent karega */
+  background: hsla(0, 94%, 63%, 0.968);
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 100px;   
+  width: 100px;  
+  margin-top: 5px;
+  /* border-radius: 50%;  */
+  object-fit: cover;  /* ✅ image distort na ho */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  color: white;
+  margin-right: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 10px 15px;
+}
+
+.nav-links a:hover {
+  color: gray;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+  color: #0073e6;
+}
