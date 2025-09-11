@@ -5,8 +5,8 @@ function TopHeader() {
   return (
     <>
       <div className="topbar">
-      <span className="contact-info">📞 9938079155, 9439084371</span>
-      <span className="contact-info">✉️ admissionathps@gmail.com</span>
+      <span className="contact-info">📞 9938850767, 9090451990</span>
+      <span className="contact-info">✉️ ssmnkt@gmail.com</span>
 
       {/* Animated Text */}
       <div className="scroll-text">
@@ -14,13 +14,13 @@ function TopHeader() {
       </div>
 
       {/* Social Icons */}
-      <div className="social-icons">
+      {/* <div className="social-icons">
         <a href="#"><FaFacebookF /></a>
         <a href="#"><FaTwitter /></a>
         <a href="#"><FaLinkedinIn /></a>
         <a href="#"><FaInstagram /></a>
         <a href="#"><FaYoutube /></a>
-      </div>
+      </div> */}
     </div>
     </>
   )
