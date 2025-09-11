@@ -60,7 +60,7 @@
   left: 50%;
   bottom: 5px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: white;
   transition: all 0.3s ease;
   transform: translateX(-50%);
@@ -68,7 +68,7 @@
 
 .nav-links a:hover::after,
 .dropbtn:hover::after {
-  width: 100%;
+  width: 70%;
 }
 
 .nav-links a:hover,
@@ -134,14 +134,14 @@
   left: 50%;
   bottom: 5px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: white;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .dropbtn:hover::after {
-  width: 100%;
+  width: 70%;
 }
 
 .dropbtn:hover {
