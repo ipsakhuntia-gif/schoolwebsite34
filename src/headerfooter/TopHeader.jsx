@@ -13,7 +13,7 @@ function TopHeader() {
         <span >Welcome to Swaraswati Shikhya Mandira,Naharakanta,BBSR</span>
       </div>
 
-      {/* Social Icons */}
+      
       {/* <div className="social-icons">
         <a href="#"><FaFacebookF /></a>
         <a href="#"><FaTwitter /></a>
