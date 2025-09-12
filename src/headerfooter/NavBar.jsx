@@ -34,9 +34,9 @@ const Navbar = () => {
           {activeDropdown === "about" && (
             <ul className="dropdown-menu">
               <li><Link to="/about#school">About School</Link></li>
-              <li><Link to="/about#president">President</Link></li>
+              {/* <li><Link to="/about#president">President</Link></li> */}
               <li><Link to="/about#secretary">Secretary</Link></li>
-              <li><Link to="/about#principal">Principal</Link></li>
+              <li><Link to="/about#principal">PradhanAcharya</Link></li>
             </ul>
           )}
         </li>

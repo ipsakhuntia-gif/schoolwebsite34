@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopHeader from './headerfooter/TopHeader'
 import NavBar from './headerfooter/NavBar';
+import Footer from './headerfooter/Footer';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Router>
       <TopHeader />
       <NavBar/>
+      <Footer/>
       <Routes>
         {/* <Route path="/home" element={<Home />} /> */}
         {/* <Route path="/about" element={<About />} />
