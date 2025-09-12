@@ -5,8 +5,8 @@ function TopHeader() {
   return (
     <>
       <div className="topbar">
-      <span className="contact-info">📞 9938850767, 9090451990</span>
-      <span className="contact-info">✉️ ssmnkt@gmail.com</span>
+      <span className="contact-in">📞 9938850767, 9090451990</span>
+      <span className="contact-in">✉️ ssmnkt@gmail.com</span>
 
       {/* Animated Text */}
       <div className="scroll-text">

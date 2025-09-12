@@ -34,6 +34,8 @@ import TopHeader from './headerfooter/TopHeader'
 import NavBar from './headerfooter/NavBar';
 import Footer from './headerfooter/Footer';
 import HolidayList from './Holiday/HolidayList';
+import AdmissionPage from './Admission/AdmissionPage';
+import ContactPage from './Contact/ContactPage';
 
 function App() {
   return (
@@ -43,7 +45,8 @@ function App() {
       <Routes>
         {/* Add the HolidayList route */}
         <Route path="/holiday-list" element={<HolidayList />} />
-        
+        <Route path="/admission" element={<AdmissionPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         {/* Your other routes */}
         {/* <Route path="/home" element={<Home />} /> */}
         {/* <Route path="/about" element={<About />} />
