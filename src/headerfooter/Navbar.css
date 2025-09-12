@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  color: white;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background: hsla(0, 94%, 63%, 0.968);
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 100px;   
+  width: 100px;  
+  margin-top: 5px;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  color: white;
+  margin-right: 30px;
+  font-size: 16px; /* ✅ uniform font size */
+  font-family: 'Poppins', sans-serif; /* ✅ uniform font family */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/* Main links + dropdown button */
+.nav-links a,
+.dropbtn {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  font-size: 16px;  /* ✅ same as nav links */
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* 🔥 Hover underline effect (sirf main links/dropbtn ke liye) */
+.nav-links a::after,
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.dropbtn:hover::after {
+  width: 70%;
+}
+
+.nav-links a:hover,
+.dropbtn:hover {
+  color: #ddd;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 15px; /* thoda chhota bhi kar sakte ho */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ❌ Dropdown links par underline nahi hoga */
+.dropdown-menu li a::after {
+  display: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+  color: #0073e6;
+}
+
+
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.dropbtn:hover::after {
+  width: 70%;
+}
+
+.dropbtn:hover {
+color:#ddd;
+}
