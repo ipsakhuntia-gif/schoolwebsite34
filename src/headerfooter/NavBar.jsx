@@ -42,7 +42,7 @@ const Navbar = () => {
         </li>
 
         <li><Link to="/admission">Admission</Link></li>
-        <li><Link to="/academic">Academic</Link></li>
+        <li><Link to="/academic">Academics</Link></li>
 
         {/* Facilities Dropdown */}
         <li className="dropdown">
