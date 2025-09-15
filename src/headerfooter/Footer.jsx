@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>
-            Saraswati Shikhya Mandira <br />
+             <span>Saraswati Shikhya Mandira </span>
             Naharakanta,Bhubaneswar-752101
           </p>
           <p>📞 9938850767, 9090451990</p>
@@ -30,8 +30,8 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Admissions</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Admission</a></li>
             <li><a href="#">Academics</a></li>
             <li><a href="#">Facilities</a></li>
             <li><a href="#">Holiday List</a></li>

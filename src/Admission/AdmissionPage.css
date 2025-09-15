@@ -1,0 +1,207 @@
+/* AdmissionPage.css */
+
+
+.admission-page {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.school-header {
+  background: linear-gradient(135deg, rgb(96, 30, 162) 0%, rgba(96, 30, 162, 0.9) 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.school-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.mission {
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.download-btn {
+  background-color: hsla(0, 94%, 63%, 0.968);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background-color: hsl(0, 94%, 58%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Intro Section */
+.intro-section {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 5px solid rgb(96, 30, 162);
+}
+
+.intro-section h2 {
+  color: rgb(96, 30, 162);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Admission Procedure */
+.admission-procedure {
+  margin-bottom: 40px;
+}
+
+.admission-procedure h2 {
+  color: rgb(96, 30, 162);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.note {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.procedure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.procedure-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid hsla(0, 94%, 63%, 0.968);
+}
+
+.procedure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.procedure-card h3 {
+  color: rgb(96, 30, 162);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.procedure-card ul {
+  padding-left: 20px;
+}
+
+.procedure-card li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.procedure-card li:before {
+  content: "•";
+  color: hsla(0, 94%, 63%, 0.968);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Footer */
+.admission-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: hsla(0, 94%, 63%, 0.968);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .school-header h1 {
+    font-size: 2rem;
+  }
+  
+  .mission {
+    font-size: 1rem;
+  }
+  
+  .download-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .procedure-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .intro-section, .procedure-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-header {
+    padding: 25px 15px;
+  }
+  
+  .school-header h1 {
+    font-size: 1.7rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .admission-procedure h2 {
+    font-size: 1.6rem;
+  }
+  
+  .procedure-card h3 {
+    font-size: 1.2rem;
+  }
+}

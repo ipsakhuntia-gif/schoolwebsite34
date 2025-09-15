@@ -1,5 +1,5 @@
 .footer {
-  background: #512da8; /* purple background */
+  background: linear-gradient(135deg, rgba(146, 107, 184, 0.715), rgb(96, 30, 162)); /* purple background */
   color: white;
   padding: 40px 20px;
 }
@@ -28,8 +28,16 @@
 .footer-section li {
   font-size: 18px;
   line-height: 1.6;
+  color: white;
 }
-
+.footer-section p span{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(127, 125, 125, 0.653);
+    /* font-style:initial; */
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
 .footer-section ul {
   list-style: none;
   padding: 0;
