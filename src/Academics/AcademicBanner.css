@@ -1,0 +1,53 @@
+.academic-banner {
+  width: 100%;
+  height: 40vh;
+  background-image: url("../assets/image/Academicbanner.png"); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overlay p {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.overlay .breadcrumb {
+  color: #ffd700; 
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.overlay .breadcrumb:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .academic-banner {
+    background-image: url("../assets/image//Academicbanner.png"); 
+  }
+
+  .overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay p {
+    font-size: 0.9rem;
+  }
+}
