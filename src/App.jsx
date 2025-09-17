@@ -36,6 +36,7 @@ import Footer from './headerfooter/Footer';
 import HolidayList from './Holiday/HolidayList';
 import AdmissionPage from './Admission/AdmissionPage';
 import ContactPage from './Contact/ContactPage';
+import AcademicPage from './Academics/AcademicPage';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         {/* Add the HolidayList route */}
         <Route path="/holiday-list" element={<HolidayList />} />
         <Route path="/admission" element={<AdmissionPage />} />
+        <Route path="/academic" element={<AcademicPage />} />
         <Route path="/contact" element={<ContactPage />} />
         {/* Your other routes */}
         {/* <Route path="/home" element={<Home />} /> */}
@@ -57,6 +59,7 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+    
   )
 }
 

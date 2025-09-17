@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/image/schoollogo.png";
@@ -9,6 +9,24 @@ const Navbar = () => {
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
+
+  // Close dropdown when clicking anywhere (except on dropdown buttons)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if clicked element is a dropdown button
+      const isDropdownButton = event.target.classList.contains('dropbtn') || 
+                              event.target.closest('.dropbtn');
+      
+      if (!isDropdownButton) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="navbar">
@@ -26,7 +44,7 @@ const Navbar = () => {
         {/* About Dropdown */}
         <li className="dropdown">
           <button 
-            className="dropbtn" 
+            className="dropbtn"
             onClick={() => toggleDropdown("about")}
           >
             About ▾
@@ -43,11 +61,12 @@ const Navbar = () => {
 
         <li><Link to="/admission">Admission</Link></li>
         <li><Link to="/academic">Academics</Link></li>
+        <li><Link to="/faculty">Faculty</Link></li>
 
         {/* Facilities Dropdown */}
         <li className="dropdown">
           <button 
-            className="dropbtn" 
+            className="dropbtn"
             onClick={() => toggleDropdown("facilities")}
           >
             Facilities ▾
@@ -61,6 +80,7 @@ const Navbar = () => {
           )}
         </li>
 
+        <li><Link to="/gallery">Gallery</Link></li>
         <li><Link to="/holiday-list">Holiday List</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
       </ul>

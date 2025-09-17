@@ -1,26 +1,27 @@
 
+
 *{
   margin: 0;
   padding: 0;
 }
 
 .topbar {
-  /* background-color: rgba(255, 68, 0, 0.737);  */
+ font-family: 'Poppins', sans-serif;
   background-color: rgb(96, 30, 162);
   color: white;
   padding: 5px 15px;
   display: flex;
-  height: 30px;
+  height: 35px;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   overflow: hidden;
 
 }
 
 .contact-in {
   margin-right: 20px;
-  font-weight: lighter;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .scroll-text {
@@ -29,9 +30,12 @@
   white-space: nowrap;
   position: relative;
   color: white;
-  height: 25px;  
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;        
+  height: 35px; 
+  padding-top: 4px; 
+  font-family: 'Poppins', sans-serif; /* Clean font for marquee */
+  font-size: 18px;   /* reduced a little for balance */
+  font-weight: 600;
+  letter-spacing: 1px;        
 }
 
 .scroll-text span {
@@ -50,7 +54,7 @@
   }
 }
 
-.social-icons {
+/* .social-icons {
   display: flex;
   gap: 12px;
   margin-left: 20px;
@@ -60,8 +64,4 @@
   color: white;
   font-size: 18px;
   transition: color 0.3s ease;
-}
-
-/* .social-icons a:hover {
-  color: #ffcc00;
 } */
