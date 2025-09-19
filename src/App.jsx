@@ -11,7 +11,6 @@ import AdmissionPage from './Admission/AdmissionPage';
 import ContactPage from './Contact/ContactPage';
 import AcademicPage from './Academics/AcademicPage';
 import FacultyTable from './Faculty/Faculty';
-import Home from './home/Home';
 
 
 
@@ -22,7 +21,7 @@ function App() {
       <NavBar/>
       <Routes>
         {/* Add the HolidayList route */}
-       <Route path="/" element={<Home />} />
+       
         <Route path="/holiday-list" element={<HolidayList />} />
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/academic" element={<AcademicPage />} />
