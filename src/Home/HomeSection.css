@@ -1,0 +1,60 @@
+.home-section {
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  color: white;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.school-name {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.school-location {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.about-school {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.about-school h2, .about-school h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ffeb3b;
+}
+
+.about-school p, .about-school li {
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.about-school ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .school-name {
+    font-size: 28px;
+  }
+  .school-location {
+    font-size: 18px;
+  }
+  .about-school p, .about-school li {
+    font-size: 15px;
+  }
+}

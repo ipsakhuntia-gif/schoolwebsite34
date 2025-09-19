@@ -55,6 +55,7 @@ const Navbar = () => {
               {/* <li><Link to="/about#president">President</Link></li> */}
               <li><Link to="/about#secretary">Secretary</Link></li>
               <li><Link to="/about#principal">PradhanAcharya</Link></li>
+              <li><Link to="/about#principal">Achievment</Link></li>
             </ul>
           )}
         </li>
@@ -76,6 +77,7 @@ const Navbar = () => {
               <li><Link to="/facilities#library">Library</Link></li>
               <li><Link to="/facilities#sports">Sports</Link></li>
               <li><Link to="/facilities#transport">Transport</Link></li>
+              <li><Link to="/facilities#transport">Co-curriculars</Link></li>
             </ul>
           )}
         </li>

@@ -37,6 +37,7 @@ import HolidayList from './Holiday/HolidayList';
 import AdmissionPage from './Admission/AdmissionPage';
 import ContactPage from './Contact/ContactPage';
 import AcademicPage from './Academics/AcademicPage';
+import HomeSection from './Home/HomeSection';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <NavBar/>
       <Routes>
         {/* Add the HolidayList route */}
+         <Route path="/" element={<HomeSection/>} />
         <Route path="/holiday-list" element={<HolidayList />} />
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/academic" element={<AcademicPage />} />

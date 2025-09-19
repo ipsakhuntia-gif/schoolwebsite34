@@ -1,67 +1,40 @@
-
-
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .topbar {
- font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: rgb(96, 30, 162);
   color: white;
-  padding: 5px 15px;
+  padding: 0 15px; /* reduced vertical padding */
   display: flex;
-  height: 35px;
   align-items: center;
+  justify-content: space-between; /* contact left, school center handled below */
+  height: 40px; /* fixed height */
   font-size: 12px;
-  overflow: hidden;
+  overflow: hidden; /* prevent extra shadow/scroll */
+  position: relative;
+}
 
+.contact-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .contact-in {
-  margin-right: 20px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
 
-.scroll-text {
-  flex: 1;
-  overflow: hidden;      
-  white-space: nowrap;
-  position: relative;
-  color: white;
-  height: 35px; 
-  padding-top: 4px; 
-  font-family: 'Poppins', sans-serif; /* Clean font for marquee */
-  font-size: 18px;   /* reduced a little for balance */
+.school-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 600;
-  letter-spacing: 1px;        
+  font-size: 16px;
+  line-height: 40px; /* same as topbar height */
+  white-space: nowrap;
 }
-
-.scroll-text span {
-  display: inline-block;
-  padding-left: 100%;    
-  animation: scroll-left 10s linear infinite;
-}
-
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* .social-icons {
-  display: flex;
-  gap: 12px;
-  margin-left: 20px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 18px;
-  transition: color 0.3s ease;
-} */
