@@ -26,7 +26,6 @@ function App() {
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/academic" element={<AcademicPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/faculty" element={<FacultyTable />} />
         
             
@@ -44,4 +43,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
