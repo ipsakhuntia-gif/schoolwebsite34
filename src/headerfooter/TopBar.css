@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .topbar {
@@ -14,14 +13,8 @@
   justify-content: space-between; /* contact left, school center handled below */
   height: 40px; /* fixed height */
   font-size: 12px;
-  overflow: hidden; /* prevent extra shadow/scroll */
-  position: relative;
-}
+  overflow: hidden;
 
-.contact-left {
-  display: flex;
-  gap: 15px;
-  align-items: center;
 }
 
 .contact-in {

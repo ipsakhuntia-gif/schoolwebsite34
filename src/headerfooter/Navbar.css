@@ -9,9 +9,11 @@
   color: white;
   padding: 0 30px;
   box-sizing: border-box;
-  background: hsla(0, 94%, 63%, 0.968);
+  /* background: hsla(0, 94%, 63%, 0.968); */
+  background:linear-gradient(135deg, rgba(229, 178, 23, 0.693), hsla(0, 94%, 63%, 0.968)) ; 
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  
 }
 
 .logo img {
