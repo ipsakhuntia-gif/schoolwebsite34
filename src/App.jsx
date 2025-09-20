@@ -11,31 +11,26 @@ import AdmissionPage from './Admission/AdmissionPage';
 import ContactPage from './Contact/ContactPage';
 import AcademicPage from './Academics/AcademicPage';
 import FacultyTable from './Faculty/Faculty';
+import HomeSection from "./Home/HomeSection"
 
 
 
 function App() {
   return (
     <Router>
+     
       <TopHeader />
       <NavBar/>
       <Routes>
-        {/* Add the HolidayList route */}
-       
+        
+       <Route path="/" element={<HomeSection/>} />
         <Route path="/holiday-list" element={<HolidayList />} />
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/academic" element={<AcademicPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/faculty" element={<FacultyTable />} />
-        
-            
-        {/* Your other routes */}
-        {/* <Route path="/" element={<Homepage />} /> */}
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/admission" element={<Admission />} />
-        <Route path="/academic" element={<Academic />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/contact" element={<Contact />} /> */}
+
       </Routes>
       <Footer/>
     </Router>

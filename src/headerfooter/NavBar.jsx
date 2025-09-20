@@ -14,9 +14,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Check if clicked element is a dropdown button
-      const isDropdownButton = event.target.classList.contains('dropbtn') || 
-                              event.target.closest('.dropbtn');
-      
+      const isDropdownButton = event.target.classList.contains('dropbtn') ||
+        event.target.closest('.dropbtn');
+
       if (!isDropdownButton) {
         setActiveDropdown(null);
       }
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* About Dropdown */}
         <li className="dropdown">
-          <button 
+          <button
             className="dropbtn"
             onClick={() => toggleDropdown("about")}
           >
@@ -66,7 +66,7 @@ const Navbar = () => {
 
         {/* Facilities Dropdown */}
         <li className="dropdown">
-          <button 
+          <button
             className="dropbtn"
             onClick={() => toggleDropdown("facilities")}
           >
