@@ -1,4 +1,9 @@
-<div className="topbar">
+import React from 'react'
+import "../headerfooter/TopBar.css"
+function TopHeader() {
+  return (
+    <>
+      <div className="topbar">
   <div className="contact-left">
     <span className="contact-in">📞 9938850767, 9090451990</span>
     <span className="contact-in">✉️ ssmnkt@gmail.com</span>
@@ -8,3 +13,9 @@
     ସ୍ୱରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର, ନହରକଣ୍ଟା
   </div>
 </div>
+
+    </>
+  )
+}
+
+export default TopHeader
