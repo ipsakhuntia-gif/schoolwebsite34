@@ -1,4 +1,4 @@
-.faculty-container {
+/* .faculty-container {
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
@@ -14,14 +14,13 @@
   font-weight: bold;
 }
 
-/* Faculty List with spacing */
 .faculty-list {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* space instead of table lines */
+  gap: 20px; 
 }
 
-/* Card Style */
+
 .faculty-card {
   display: flex;
   align-items: center;
@@ -31,26 +30,24 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
-  /* Animation */
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
-  transition: all 0.3s ease; /* smooth hover effect */
+  transition: all 0.3s ease; 
 }
 
-/* Staggered animation delay for each card */
+
 .faculty-card:nth-child(1) { animation-delay: 0.1s; }
 .faculty-card:nth-child(2) { animation-delay: 0.3s; }
 .faculty-card:nth-child(3) { animation-delay: 0.5s; }
 .faculty-card:nth-child(4) { animation-delay: 0.7s; }
 .faculty-card:nth-child(5) { animation-delay: 0.9s; }
 
-/* Hover Effect */
+
 .faculty-card:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* Image Style */
 .faculty-img {
   width: 80px;
   height: 80px;
@@ -60,13 +57,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Image Zoom on Hover */
 .faculty-card:hover .faculty-img {
   transform: scale(1.1);
   border-color: #007bff;
 }
 
-/* Text Style */
 .faculty-info h3 {
   margin: 0;
   font-size: 18px;
@@ -79,7 +74,7 @@
   color: #444;
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -89,4 +84,120 @@
     opacity: 1;
     transform: translateY(0);
   }
+} */
+
+
+
+.faculty-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.faculty-container h2 {
+  color: #333;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.faculty-carousel {
+  padding-bottom: 40px;
+}
+
+/* Card layout - column */
+.faculty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  height: 340px; /* Increased height */
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.faculty-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Top Image (square) */
+.faculty-img-top {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.faculty-card:hover .faculty-img-top {
+  transform: scale(1.08);
+}
+
+/* Faculty Info */
+.faculty-info h3 {
+  margin: 5px 0 10px;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.faculty-info p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0056b3;
+}
+
+.swiper-pagination-bullet {
+  background: #007bff;
+}
+
+.faculty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px;
+  background: #fff;
+  border-radius: 10px;
+  height: 380px;
+  transition: transform .25s ease;
+}
+
+.faculty-img-top {
+  width: 160px;
+  height: 160px; 
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
 }
