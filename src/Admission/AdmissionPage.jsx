@@ -11,7 +11,16 @@ const AdmissionPage = () => {
         <p className="mission">
           The goal of education is not to increase the amount of knowledge but to create the possibilities for a child to invent and discover, to create men who are capable of doing new things.
         </p>
-        <button className="download-btn">Click here to Download Application Form</button>
+        {/* <button className="download-btn">Click here to Download Application Form</button> */}
+        <a
+          href="/4119528856.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="download-btn"
+        >
+          Click here to Download Application Form
+        </a>
+
       </header>
 
       {/* Intro Section */}
@@ -26,7 +35,7 @@ const AdmissionPage = () => {
       <section className="admission-procedure">
         <h2>Admission Procedure</h2>
         <p className="note">(Admission will be made strictly on the basis of merit.)</p>
-        
+
         <div className="procedure-grid">
           {/* Pre-nursery to UKG */}
           <div className="procedure-card">
