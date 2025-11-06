@@ -1,0 +1,143 @@
+.playschool-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffaf5;
+  position: relative;
+  overflow: hidden;
+}
+
+.playschool-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.playschool-image{
+  width: 500px;
+  height: 630px;
+}
+.playschool-image img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  border: 5px solid #ffa726;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.playschool-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ptitle {
+  font-size: 28px;
+  background-color: #ffa726;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 6px;
+  transform: rotate(-2deg);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(-2deg);
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+  gap: 12px 40px;
+}
+
+.skill {
+  font-size: 16px;
+  color: #222;
+  position: relative;
+  padding-left: 25px;
+}
+
+.skill::before {
+  content: "✔";
+  color: #ff9800;
+  position: absolute;
+  left: 0;
+  animation: tickAppear 1s ease forwards;
+} */
+
+@keyframes tickAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.monkey {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 40px;
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .playschool-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .playschool-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

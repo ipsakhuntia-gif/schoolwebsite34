@@ -24,6 +24,9 @@ import ScienceLab from './Facilities/ScienceLab';
 import Sports from './Facilities/Sports';
 import MusicAndArtsRoom from './Facilities/MusicAndArtsRoom';
 import Transportation from './Facilities/Transportation';
+import PlaySchool from "./Playschool/PlaySchool";
+import SishuPrabesha from "./Playschool/SishuPrabesha";
+import PlayLearn from "./Playschool/PlayLearn";
 
 function AppContent() {
   const location = useLocation();
@@ -54,6 +57,9 @@ function AppContent() {
           element={<MusicAndArtsRoom />}
         />
         <Route path="/facilities/transportation" element={<Transportation />} />
+        <Route path="/playschool" element={<PlaySchool />} />
+        <Route path="/sishuprabesha" element={<SishuPrabesha />} />
+         <Route path="/sishuprabesha/play-learn" element={<PlayLearn />} />
       </Routes>
       <Footer />
     </>
