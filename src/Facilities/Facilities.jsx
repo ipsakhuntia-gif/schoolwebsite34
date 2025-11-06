@@ -1,123 +1,84 @@
-// import React, { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
-// import Library from "./Library";
-
-// export default function Facilities() {
-//   const location = useLocation();
-
-//   useEffect(() => {
-//     if (location.hash) {
-//       const id = location.hash.replace("#", "");
-//       const section = document.getElementById(id);
-//       if (section) {
-//         setTimeout(() => {
-//           section.scrollIntoView({ behavior: "smooth" });
-//         }, 200);
-//       }
-//     } else {
-//       window.scrollTo(0, 0);
-//     }
-//   }, [location]);
-
-//   return (
-//     <div style={{ padding: "50px" }}>
-//       <h1 style={{ textAlign: "center" }}>Our Facilities</h1>
-
-//       <section id="library" style={{ padding: "60px 0" }}>
-//         <h2>Library</h2>
-//         <Library />
-//       </section>
-
-//       <section id="sports" style={{ padding: "60px 0" }}>
-//         <h2>Sports</h2>
-//         <p>We have both indoor and outdoor sports facilities for students.</p>
-//       </section>
-
-//       <section id="transport" style={{ padding: "60px 0" }}>
-//         <h2>Transport</h2>
-//         <p>Our school buses cover major routes with proper safety measures.</p>
-//       </section>
-
-//       <section id="co-curriculars" style={{ padding: "60px 0" }}>
-//         <h2>Co-curriculars</h2>
-//         <p>We conduct art, music, and cultural activities regularly.</p>
-//       </section>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// src/Components/Facilities.jsx
 import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Facilities.css";
+import classroom from "../assets/image/classroom.jpg";
+
+const facilitiesData = [
+  {
+    title: "Smart Classrooms",
+    description:
+      "Equipped with digital boards and interactive learning tools to enhance classroom engagement.",
+    img: classroom,
+    link: "/facilities/smart-classrooms",
+  },
+  {
+    title: "Science Laboratories",
+    description:
+      "Modern physics, chemistry, and biology labs to promote hands-on learning and experimentation.",
+    img: "/images/science-lab.jpg",
+    link: "/facilities/science-lab",
+  },
+  {
+    title: "Library & Reading Hall",
+    description:
+      "A peaceful and resourceful environment with books, journals, and digital access to global knowledge.",
+    img: "/images/library.jpg",
+    link: "/facilities/library",
+  },
+  {
+    title: "Sports & Fitness Zone",
+    description:
+      "Facilities for indoor and outdoor sports including football, basketball, and yoga sessions.",
+    img: "/images/sports.jpg",
+    link: "/facilities/sports",
+  },
+  {
+    title: "Music & Arts Room",
+    description:
+      "Encouraging creativity with instruments, art supplies, and performance spaces for students.",
+    img: "/images/music-room.jpg",
+    link: "/facilities/musicAndArtsRoom",
+  },
+  {
+    title: "Transportation",
+    description:
+      "Safe and reliable school buses with GPS tracking for the convenience of parents and students.",
+    img: "/images/transport.jpg",
+    link: "/facilities/transportation",
+  },
+];
 
 export default function Facilities() {
-  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      const section = document.getElementById(id);
-      if (section) {
-        setTimeout(() => {
-          section.scrollIntoView({ behavior: "smooth" });
-        }, 200);
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location]);
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
-    <div style={{ padding: "50px" }}>
-      <h1 style={{ textAlign: "center" }}>Our Facilities</h1>
-
-      <section id="library" style={{ padding: "60px 0" }}>
-        <h2>Library</h2>
-        <p>We have a well-stocked library with over 10,000 books and digital resources.</p>
-        <Link to="/library" style={{ color: "blue", textDecoration: "underline" }}>
-          Visit our dedicated Library page for more details
-        </Link>
-      </section>
-
-      <section id="sports" style={{ padding: "60px 0" }}>
-        <h2>Sports</h2>
-        <p>We have both indoor and outdoor sports facilities for students.</p>
-      </section>
-
-      <section id="transport" style={{ padding: "60px 0" }}>
-        <h2>Transport</h2>
-        <p>Our school buses cover major routes with proper safety measures.</p>
-      </section>
-
-      <section id="co-curriculars" style={{ padding: "60px 0" }}>
-        <h2>Co-curriculars</h2>
-        <p>We conduct art, music, and cultural activities regularly.</p>
-      </section>
-    </div>
+    <section className="facilities-section" id="facilities">
+      <h2 className="facilities-title">Our Facilities</h2>
+      <div className="facilities-grid">
+        {facilitiesData.map((facility, index) => (
+          <div
+            className="facility-card"
+            key={index}
+            data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
+            onClick={() => navigate(facility.link)}
+          >
+            <div className="facility-image">
+              <img src={facility.img} alt={facility.title} />
+            </div>
+            <div className="facility-content">
+              <h3>{facility.title}</h3>
+              <p>{facility.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

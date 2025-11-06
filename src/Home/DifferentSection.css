@@ -1,0 +1,79 @@
+.different-section {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #5a2ca0;
+  margin-bottom: 40px;
+}
+
+.different-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.different-card {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Image zoom on hover */
+.different-card:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay always visible but transparent initially */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 255, 0.0); /* initially transparent */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.4s ease;
+}
+
+/* On hover → overlay becomes blue */
+.different-card:hover .overlay {
+  background: rgba(0, 0, 255, 0.386);
+}
+
+.overlay h3 {
+  font-size: 23px;
+  /* height: 70px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: rgba(107, 8, 199, 0.593);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.6); 
+}
+
+.overlay p {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bolder;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+}

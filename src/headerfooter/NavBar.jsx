@@ -173,16 +173,21 @@ const Navbar = () => {
 
         {/* Facilities Dropdown */}
         <li className="dropdown">
-          <button
+          <Link
+            to="/facilities"
             className="dropbtn"
-            onClick={() => toggleDropdown("facilities")}
+            // onClick={() =>
+            //   setActiveDropdown(
+            //     activeDropdown === "facilities" ? null : "facilities"
+            //   )
+            // }
           >
-            Facilities ▾
-          </button>
-          {activeDropdown === "facilities" && (
+            Facilities 
+          </Link>
+
+          {/* {activeDropdown === "facilities" && (
             <ul className="dropdown-menu">
               <li>
-                {/* ✅ Opens new Library page */}
                 <Link to="/library">Library</Link>
               </li>
               <li>
@@ -195,7 +200,7 @@ const Navbar = () => {
                 <Link to="/facilities#co-curriculars">Co-curriculars</Link>
               </li>
             </ul>
-          )}
+          )} */}
         </li>
 
         <li>

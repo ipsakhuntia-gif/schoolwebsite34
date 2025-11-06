@@ -396,7 +396,8 @@ function ModernSchoolSlider() {
                       fontSize: "1.4rem",
                       fontWeight: "600",
                       margin: 0,
-                      textShadow: "0 2px 10px rgba(0,0,0,0.7)"
+                      textShadow: "0 2px 10px rgba(0,0,0,0.7)",
+                      color:"white"
                     }}>
                       {imageDescriptions[index]}
                     </h3>
