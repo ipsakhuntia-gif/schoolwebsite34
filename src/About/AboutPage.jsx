@@ -5,7 +5,7 @@ import bgImage from "../assets/image/jaga.jpg"; // replace with your image
 const AboutPage = () => {
   return (
     <div className="about-page" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="overlay">
+      <div className="overlay1">
         <div className="content">
            <div className="cap-animation">🎓</div>
           <h1>ସ୍ୱରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର</h1>

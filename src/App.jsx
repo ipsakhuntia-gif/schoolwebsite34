@@ -16,7 +16,7 @@ import FacultyTable from "./Faculty/Faculty";
 import Homepage from "./Home/homepage";
 import AboutPage from "./About/AboutPage";
 
-// ✅ Create a wrapper component to use useLocation inside Router
+
 function AppContent() {
   const location = useLocation();
   console.log("Current Path:", location.pathname);
