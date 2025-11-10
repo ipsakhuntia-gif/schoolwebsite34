@@ -29,13 +29,14 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">About </a></li>
-            <li><a href="#">Admission</a></li>
+            <li><a href="/admission">Admission</a></li>
             <li><a href="#">Academics</a></li>
-            <li><a href="#">Facilities</a></li>
-            <li><a href="#">Holiday List</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="">Facilities</a></li>
+            <li><a href="/faculty">Faculty</a></li>
+            <li><a href="/holiday-list">Holiday List</a></li>
+            <li><a href="/contact">Contact us</a></li>
           </ul>
         </div>
 
