@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // import React, { useState, useEffect, useRef } from "react";
 // import "../Academics/academic.css";
 // import { academicsData } from "../Academics/academicsData";
@@ -89,6 +90,8 @@
 
 
 
+=======
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
 import React, { useState, useEffect, useRef } from "react";
 import "../Academics/academic.css";
 import { academicsData } from "../Academics/academicsData";
@@ -105,12 +108,20 @@ const Academics = () => {
         const entry = entries[0];
         if (entry.isIntersecting) {
           setVisibleSection(true);
+<<<<<<< HEAD
           setTypedIds([]); // Reset typed IDs when visible again
+=======
+          setTypedIds([]); 
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
         } else {
           setVisibleSection(false);
         }
       },
+<<<<<<< HEAD
       { threshold: 0.4 }
+=======
+      { threshold: 0.4 } 
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
     );
 
     if (sectionRef.current) {
@@ -134,9 +145,13 @@ const Academics = () => {
           <div key={item.id} className="academics-card">
             <img src={item.image} alt={item.title} className="academics-img" />
             <h3 className="academics-heading">{item.title}</h3>
+<<<<<<< HEAD
 
             {/* ✅ Changed <p> to <div> to fix nesting issue */}
             <div className="academics-text">
+=======
+            <p className="academics-text">
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
               {visibleSection && !typedIds.includes(item.id) ? (
                 <Typewriter
                   onInit={(typewriter) => {
@@ -155,7 +170,11 @@ const Academics = () => {
               ) : (
                 item.description
               )}
+<<<<<<< HEAD
             </div>
+=======
+            </p>
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
           </div>
         ))}
       </div>

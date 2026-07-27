@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // src/components/Gallery/Gallery.jsx
 // import React, { useEffect } from "react";
 // import AOS from "aos";
@@ -57,6 +58,9 @@
 
 
 
+=======
+// src/components/Gallery/Gallery.jsx
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -75,10 +79,20 @@ const Gallery = () => {
         <p>Moments that make learning joyful and memorable</p>
       </div>
 
+<<<<<<< HEAD
       <div className="masonry-grid">
         {galleryImages.map((item) => (
           <div key={item.id} className="masonry-item" data-aos="zoom-in">
             <img src={item.src} alt={item.title} />
+=======
+      <div className="gallery-grid">
+        {galleryImages.map((item) => (
+          <div key={item.id} className="gallery-item" data-aos="zoom-in">
+            <img src={item.src} alt={item.title} />
+            <div className="overlay">
+              <h3>{item.title}</h3>
+            </div>
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
           </div>
         ))}
       </div>

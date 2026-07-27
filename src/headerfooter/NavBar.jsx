@@ -74,7 +74,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li role="none">
+<<<<<<< HEAD
                 <Link role="menuitem" to="/about-principal">
+=======
+                <Link role="menuitem" to="/about#principal">
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
                   Pradhanacharya
                 </Link>
               </li>

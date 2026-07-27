@@ -78,7 +78,11 @@ const ContactPage = () => {
                   required
                 />
               </div>
+<<<<<<< HEAD
               {/* <div className="form-group">
+=======
+              <div className="form-group">
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
                 <input
                   type="text"
                   placeholder="Company"
@@ -86,7 +90,11 @@ const ContactPage = () => {
                   value={formData.company}
                   onChange={handleChange}
                 />
+<<<<<<< HEAD
               </div> */}
+=======
+              </div>
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
             </div>
             
             <div className="form-group">
@@ -119,7 +127,11 @@ const ContactPage = () => {
               <div className="icon office-icon">🏢</div>
               <div className="info-content">
                 <h3>School</h3>
+<<<<<<< HEAD
                 <p>At-Naharakanta, Po-Naharakanta,Bhubaneswar-752101</p>
+=======
+                <p>At-Haridaspur, Po-Naharakanta,Bhubaneswar-752101</p>
+>>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
               </div>
             </div>
             
