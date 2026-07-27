@@ -1,0 +1,122 @@
+.pradhanaacharya-section {
+  width: 100%;
+  padding: 80px 10%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pradhanaacharya-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 🖼️ Image Styling */
+.pradhanaacharya-image img {
+  width: 330px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pradhanaacharya-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 📖 Content Styling */
+.pradhanaacharya-content {
+  flex: 1;
+  min-width: 320px;
+  color: #222;
+}
+
+.pradhanaacharya-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.principal-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 5px;
+}
+
+.principal-role {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pradhanaacharya-message {
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: "Noto Sans Oriya", sans-serif;
+}
+
+.signature p {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  color: #004aad;
+  margin-bottom: 3px;
+}
+
+.signature span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 992px) {
+  .pradhanaacharya-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pradhanaacharya-image img {
+    width: 280px;
+    height: 350px;
+  }
+
+  .pradhanaacharya-content {
+    padding: 20px;
+  }
+
+  .pradhanaacharya-message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pradhanaacharya-section {
+    padding: 60px 5%;
+  }
+
+  .pradhanaacharya-title {
+    font-size: 24px;
+  }
+
+  .principal-name {
+    font-size: 20px;
+  }
+
+  .pradhanaacharya-message {
+    font-size: 16px;
+  }
+}

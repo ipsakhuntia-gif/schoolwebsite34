@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topbar {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(96, 30, 162);
+  color: white;
+  padding: 0 15px; /* reduced vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* contact left, school center handled below */
+  height: 40px; /* fixed height */
+  font-size: 12px;
+  overflow: hidden; /* prevent extra shadow/scroll */
+  position: relative;
+}
+
+.contact-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-in {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.school-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 40px; /* same as topbar height */
+  white-space: nowrap;
+}

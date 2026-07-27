@@ -1,0 +1,157 @@
+.sishu-section {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #fff8e7 0%, #fef2f6 100%);
+}
+
+/* ===== Hero Section ===== */
+.sishu-hero {
+    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  
+}
+
+.sishu-hero-content {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.sishu-hero-content h1 {
+  font-size: 2.4rem;
+  color: #ff6f3c;
+}
+
+.sishu-hero-content h1 span {
+  color: #e64a19;
+}
+
+.sishu-hero-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  background-color: #ff6f3c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* ===== Hero Image ===== */
+.sishu-hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.sishu-hero-image img {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(255, 111, 60, 0.3);
+  transition: transform 0.5s ease;
+}
+
+.sishu-hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Learning Section ===== */
+.learning-section {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.learning-section h2 {
+  font-size: 2rem;
+  color: #ff6f3c;
+}
+
+.learning-text {
+  margin: 15px auto 40px;
+  max-width: 700px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.learning-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(255, 111, 60, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.learning-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(255, 111, 60, 0.35);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Monkey Animation ===== */
+.sishu-monkey {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 60px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .sishu-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .sishu-hero-content {
+    max-width: 100%;
+  }
+
+  .sishu-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .sishu-hero-image img {
+    max-width: 300px;
+  }
+}

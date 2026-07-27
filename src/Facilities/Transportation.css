@@ -1,0 +1,131 @@
+/* src/Components/Facilities/Transportation.css */
+
+.transportation-section {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+}
+
+/* ---------- Hero Section ---------- */
+.transportation-hero {
+  background: url("https://img.freepik.com/free-photo/school-bus-yellow-sunny-day_181624-40489.jpg")
+    center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ---------- Info Section ---------- */
+.transportation-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 80px 0;
+}
+
+.info-text {
+  flex: 1 1 45%;
+}
+
+.info-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-text li {
+  background: #f0f8ff;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.info-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.info-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Routes Section ---------- */
+.transportation-routes {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.transportation-routes h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.route-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.route-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.route-card:hover {
+  background-color: #f0f8ff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .transportation-info {
+    flex-direction: column;
+  }
+
+  .info-text,
+  .info-image {
+    flex: 1 1 100%;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .route-card {
+    width: 90%;
+  }
+}

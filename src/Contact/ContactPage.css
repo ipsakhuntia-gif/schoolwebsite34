@@ -1,0 +1,271 @@
+/* ContactPage.css */
+.contact-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+  flex: 1.2;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(96, 30, 162, 0.05) 0%, rgba(96, 30, 162, 0.1) 100%);
+  position: relative;
+}
+
+.contact-right {
+  flex: 0.8;
+  padding: 40px;
+  background: white;
+}
+
+.contact-left h2 {
+  color: rgb(96, 30, 162);
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contact-right h2 {
+  color: rgb(96, 30, 162);
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Children Illustration */
+.children-illustration {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 200px;
+}
+
+.school-boy, .school-girl {
+  position: relative;
+}
+
+.school-boy {
+  height: 180px;
+}
+
+.school-girl {
+  height: 170px;
+  margin-top: 10px;
+}
+
+.boy-head, .girl-head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FFD1DC;
+  position: absolute;
+  z-index: 2;
+}
+
+.boy-head {
+  background: #AEC6CF;
+  top: 0;
+  left: 15px;
+}
+
+.girl-head {
+  background: #FFB6C1;
+  top: 0;
+  left: 15px;
+}
+
+.boy-body, .girl-body {
+  position: absolute;
+  top: 40px;
+  border-radius: 10px 10px 0 0;
+}
+
+.boy-body {
+  width: 80px;
+  height: 100px;
+  background: #5D8AA8;
+  left: 0;
+}
+
+.girl-body {
+  width: 75px;
+  height: 95px;
+  background: #F4C2C2;
+  left: 0;
+}
+
+.boy-bag, .girl-bag {
+  position: absolute;
+  z-index: 3;
+}
+
+.boy-bag {
+  width: 30px;
+  height: 40px;
+  background: #8B4513;
+  border-radius: 5px;
+  top: 80px;
+  right: -10px;
+  transform: rotate(10deg);
+}
+
+.girl-bag {
+  width: 28px;
+  height: 38px;
+  background: #C19A6B;
+  border-radius: 5px;
+  top: 75px;
+  right: -8px;
+  transform: rotate(10deg);
+}
+
+/* Form Styles */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.description {
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+.submit-btn {
+  background: hsla(0, 94%, 63%, 0.968);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: hsl(0, 94%, 58%);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 15px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.info-content h3 {
+  margin: 0 0 5px 0;
+  color: rgb(96, 30, 162);
+  font-size: 18px;
+}
+
+.info-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Search Box
+.search-box {
+  display: flex;
+  margin-top: 30px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+
+.search-btn {
+  background: rgb(96, 30, 162);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+} */
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .children-illustration {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    justify-content: center;
+    margin: 20px 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-left, .contact-right {
+    padding: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .children-illustration {
+    transform: scale(0.8);
+  }
+}
