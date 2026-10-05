@@ -111,12 +111,12 @@ const SishuPrabesha = () => {
             <strong> Sishu Prabesha</strong> is designed to make the 
             transition from home to school smooth, joyful, and full of discovery.
           </p>
-          <button
+          {/* <button
             className="explore-btn"
             onClick={() => window.scrollTo({ top: 800, behavior: "smooth" })}
           >
             Explore More
-          </button>
+          </button> */}
         </div>
 
         <div className="sishu-hero-image" data-aos="fade-left">

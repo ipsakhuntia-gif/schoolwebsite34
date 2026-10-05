@@ -1,9 +1,5 @@
 // src/components/Gallery/GalleryData.js
 import schooltrip from "../assets/image/schooltrip.jpg"
-<<<<<<< HEAD
-import teachersday from "../assets/image/teacher.jpg"
-=======
->>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
 const galleryImages = [
   {
     id: 1,
@@ -35,14 +31,6 @@ const galleryImages = [
     src: schooltrip,
     title: "Educational Trip",
   },
-<<<<<<< HEAD
-  {
-    id: 7,
-    src: teachersday,
-    title: "Teachersday Celebration",
-  },
-=======
->>>>>>> 5fdb13813ccad783bfd96ba761c834d35010c12e
 ];
 
 export default galleryImages;
