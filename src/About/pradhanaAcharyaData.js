@@ -5,15 +5,16 @@ export const principal = {
   nameEn: "Smt. Jayashree Mohapatra",
   role: "ପ୍ରଧାନାଚାର୍ଯ୍ୟ",
   school: "ସରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର",
-  badge: { value: "30", label: "ବର୍ଷର ଅଭିଜ୍ଞତା" },
+  badge: { value: "24", label: "ବର୍ଷର ଅଭିଜ୍ଞତା" },
 
   pullQuote:
     "ଶିକ୍ଷା ହେଉଛି ମଣିଷ ଜୀବନର ମୂଳ ଆଧାର।",
 
   paragraphs: [
-    "ଆମ ବିଦ୍ୟାଳୟରେ ଆମେ ଶିକ୍ଷାକୁ କେବଳ ପୁସ୍ତକ ମଧ୍ୟରେ ସୀମିତ ରଖି ନାହୁଁ। ପ୍ରତ୍ୟେକ ଛାତ୍ରଛାତ୍ରୀ ନିଜ ଜୀବନ ସହିତ ଶିକ୍ଷାକୁ ଯୋଡ଼ି ଅଭିନବ ଦିଗରେ ଆଗେଇ ଯାଆନ୍ତୁ — ଏହା ପାଇଁ ଆମେ ପ୍ରତିଦିନ ଉତ୍ସାହିତ କରୁଛୁ।",
-    "ଆମର ଲକ୍ଷ୍ୟ ହେଉଛି ଏକ ଏପରି ପରିବେଶ ଗଢ଼ିବା ଯେଉଁଠି ପିଲାଏ ପ୍ରଶ୍ନ ପଚାରିବାକୁ ଭୟ କରନ୍ତି ନାହିଁ, ଭୁଲ୍ କରିବାକୁ ଡରନ୍ତି ନାହିଁ, ଏବଂ ନିଜ ଉପରେ ବିଶ୍ୱାସ ରଖି ବଡ଼ ହୁଅନ୍ତି।",
-    "ଶିକ୍ଷା ସହିତ ନୈତିକ ଓ ସାମାଜିକ ମୂଲ୍ୟବୋଧ ଗଢ଼ି ଉଠୁ — ଏହା ହିଁ ଆମ ବିଦ୍ୟାଳୟର ପ୍ରକୃତ ସଫଳତା।",
+    "Dear Students / Parents,",
+    "Welcome you to your own school Saraswati Shikhya Mandira. I am very excited to make you know some special features of this noble institution, that the new entrants are going to excel.",
+    "We encourage the parents to have frank conversation with our teachers for overall development of their kids and systems how we can better support their needs & hence obey with. We have facilities like fun bearing Math, Rreading, Writing and lots more in a play-way method.",
+    "We not only focuses on the theoretical curriculum but also help in the development of a student personally through extra curricular & co-curricular activities inside and outside the school premises. We have everything that makes our school a full-fledged institution like highly trained subject wise faculties rich library and laboratory, good teaching environment and method, computer based smart class system, doubt clearing classes, special classes for backward students etc."
   ],
 };
 

@@ -1,0 +1,18 @@
+html {
+  display: block !important;
+  width: 100% !important;
+}
+
+body {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  float: none !important;
+  position: static !important;
+}
+
+#root {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+}

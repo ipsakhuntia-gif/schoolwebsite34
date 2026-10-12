@@ -9,16 +9,15 @@
   color: white;
   padding: 0 30px;
   box-sizing: border-box;
-  /* background: hsla(0, 94%, 63%, 0.968); */
-  background:linear-gradient(135deg, rgba(229, 178, 23, 0.693), hsla(0, 94%, 63%, 0.968)) ; 
+  background: linear-gradient(135deg, rgba(229, 178, 23, 0.693), hsla(0, 94%, 63%, 0.968));
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  position: relative;
 }
 
 .logo img {
-  height: 100px;   
-  width: 100px;  
+  height: 100px;
+  width: 100px;
   margin-top: 5px;
   object-fit: cover;
 }
@@ -29,8 +28,8 @@
   gap: 18px;
   color: white;
   margin-right: 30px;
-  font-size: 16px; /* ✅ uniform font size */
-  font-family: 'Poppins', sans-serif; /* ✅ uniform font family */
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-links li {
@@ -49,12 +48,12 @@
   padding: 10px 15px;
   background: none;
   border: none;
-  font-size: 16px;  /* ✅ same as nav links */
+  font-size: 16px;
   font-family: inherit;
   cursor: pointer;
 }
 
-/* 🔥 Hover underline effect (sirf main links/dropbtn ke liye) */
+/* Hover underline effect */
 .nav-links a::after,
 .dropbtn::after {
   content: "";
@@ -103,10 +102,9 @@
   padding: 10px 15px;
   white-space: nowrap;
   text-decoration: none;
-  font-size: 15px; 
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
 }
-
 
 .dropdown-menu li a::after {
   display: none;
@@ -116,8 +114,6 @@
   background: #f0f0f0;
   color: #0073e6;
 }
-
-
 
 .dropbtn {
   background: none;
@@ -147,5 +143,97 @@
 }
 
 .dropbtn:hover {
-color:#ddd;
+  color: #ddd;
+}
+
+/* Hamburger button: hidden on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* ---------- Responsive: below 1180px the links no longer fit in one row ---------- */
+@media (max-width: 1180px) {
+  .navbar {
+    height: auto;
+    min-height: 72px;
+    padding: 8px 16px;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 60px;
+    margin-top: 0;
+  }
+
+  /* hamburger */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+  .menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .menu-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+  /* links become a panel that drops down under the bar */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 6px 0 12px;
+    background: #ef6a4c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+  }
+  .nav-links.open { display: flex; }
+
+  .nav-links a,
+  .dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 13px 20px;
+  }
+  .nav-links a::after,
+  .dropbtn::after { display: none; }
+
+  /* About submenu opens inline instead of floating */
+  .dropdown-menu {
+    position: static;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .dropdown-menu li a {
+    color: #fff;
+    padding-left: 38px;
+    white-space: normal;
+  }
+  .dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+  }
 }

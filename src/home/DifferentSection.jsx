@@ -1,6 +1,7 @@
 import React from "react";
 // import { differentData } from "./differentData";
 import "./DifferentSection.css";
+import teachers from "../assets/image/teachers.jpeg"; 
 // differentData.js
 export const differentData = [
   {
@@ -19,7 +20,7 @@ export const differentData = [
     title: "EFFICIENT FACULTY",
     description:
       "Regular training sessions and workshops by CBSE accredited resource persons are organised to improve their skills in the latest pedagogies.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600",
+    image: teachers,
   },
   {
     title: "CLASSROOMS WITH THE SMART CLASS",

@@ -1,0 +1,491 @@
+/* Academics page. All classes are prefixed "ac-" so nothing clashes. */
+
+.ac-page {
+  --ac-navy: #12286b;
+  --ac-blue: #1e3a8a;
+  --ac-sky: #dbe7ff;
+  --ac-amber: #f59e0b;
+  --ac-paper: #f6f8fc;
+  --ac-ink: #1f2937;
+  --ac-muted: #5b6475;
+
+  background: var(--ac-paper);
+  color: var(--ac-ink);
+  font-family: inherit;
+  min-height: 100vh;
+}
+
+.ac-page h1,
+.ac-page h2,
+.ac-page h3 {
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Hero ---------- */
+.ac-hero {
+  background: var(--ac-navy);
+  color: #fff;
+  padding: 90px 20px 0;
+  overflow: hidden;
+}
+
+.ac-hero-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.ac-hero-text {
+  padding-bottom: 70px;
+}
+
+.ac-hero-text h1 {
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  line-height: 1.12;
+  font-weight: 800;
+  max-width: 14em;
+}
+
+.ac-hero-text p {
+  margin: 18px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: #c9d6f5;
+  max-width: 30em;
+}
+
+/* Staircase: heights rise with the classes */
+.ac-stairs {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.ac-step {
+  flex: 1;
+  height: var(--h);
+  border: 0;
+  border-radius: 12px 12px 0 0;
+  background: #2a4396;
+  color: #fff;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  transform-origin: bottom;
+  animation: ac-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 90ms);
+}
+
+.ac-step:hover {
+  background: #3553b3;
+}
+
+.ac-step:focus-visible {
+  outline: 3px solid var(--ac-amber);
+  outline-offset: 2px;
+}
+
+.ac-step.is-active {
+  background: var(--ac-amber);
+  color: #1b1405;
+}
+
+.ac-step-classes {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ac-step-name {
+  font-size: 0.78rem;
+  opacity: 0.85;
+  line-height: 1.25;
+}
+
+@keyframes ac-rise {
+  from {
+    transform: scaleY(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Selected stage ---------- */
+.ac-stage {
+  max-width: 1150px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(18, 40, 107, 0.1);
+  padding: 40px 44px 44px;
+}
+
+.ac-stage-head h2 {
+  font-size: 1.9rem;
+  color: var(--ac-blue);
+}
+
+.ac-stage-head p {
+  margin: 8px 0 0;
+  color: var(--ac-muted);
+  font-size: 1.05rem;
+}
+
+.ac-stage-body {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px 48px;
+}
+
+.ac-block h3 {
+  font-size: 1rem;
+  color: var(--ac-navy);
+  margin-bottom: 12px;
+}
+
+.ac-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ac-chips li {
+  background: var(--ac-sky);
+  color: var(--ac-navy);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.93rem;
+}
+
+.ac-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.ac-list li::marker {
+  color: var(--ac-amber);
+}
+
+.ac-assess {
+  grid-column: 1 / -1;
+  border-top: 2px solid var(--ac-sky);
+  padding-top: 22px;
+}
+
+.ac-assess p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- Generic section ---------- */
+.ac-section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 64px 20px 0;
+}
+
+.ac-section h2 {
+  font-size: 1.7rem;
+  color: var(--ac-navy);
+  margin-bottom: 22px;
+}
+
+.ac-note {
+  margin: -12px 0 22px;
+  color: var(--ac-muted);
+}
+
+/* ---------- Exam table ---------- */
+.ac-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(18, 40, 107, 0.07);
+}
+
+.ac-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.ac-table th,
+.ac-table td {
+  text-align: left;
+  padding: 16px 22px;
+}
+
+.ac-table th {
+  background: var(--ac-navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ac-table th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.ac-table th:last-child {
+  border-top-right-radius: 14px;
+}
+
+.ac-table td {
+  border-bottom: 1px solid #e8edf7;
+}
+
+.ac-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ac-table td:first-child {
+  font-weight: 600;
+  color: var(--ac-blue);
+}
+
+/* ---------- Results bars ---------- */
+.ac-bars {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(18, 40, 107, 0.07);
+  padding: 28px 30px;
+  display: grid;
+  gap: 26px;
+}
+
+.ac-bar-group {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.ac-bar-year {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--ac-navy);
+}
+
+.ac-bar-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.ac-bar-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 46px;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.92rem;
+}
+
+.ac-bar-track {
+  height: 12px;
+  background: #e8edf7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ac-bar-fill {
+  height: 100%;
+  background: var(--ac-blue);
+  border-radius: 999px;
+}
+
+.ac-bar-fill-alt {
+  background: var(--ac-amber);
+}
+
+.ac-bar-value {
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ---------- Calendar ---------- */
+.ac-calendar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.ac-calendar li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #dbe3f2;
+}
+
+.ac-month {
+  font-weight: 800;
+  color: var(--ac-blue);
+}
+
+.ac-event {
+  line-height: 1.5;
+}
+
+/* ---------- Downloads ---------- */
+.ac-downloads {
+  padding-bottom: 80px;
+}
+
+.ac-files {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(18, 40, 107, 0.07);
+}
+
+.ac-files li {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 22px;
+  border-bottom: 1px solid #e8edf7;
+}
+
+.ac-files li:last-child {
+  border-bottom: 0;
+}
+
+.ac-file-type {
+  background: var(--ac-sky);
+  color: var(--ac-navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 6px;
+}
+
+.ac-file-name {
+  font-weight: 600;
+}
+
+.ac-file-btn {
+  background: var(--ac-blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+
+.ac-file-btn:hover {
+  background: var(--ac-navy);
+}
+
+.ac-file-btn:focus-visible {
+  outline: 3px solid var(--ac-amber);
+  outline-offset: 2px;
+}
+
+/* ---------- Tablet and mobile ---------- */
+@media (max-width: 900px) {
+  .ac-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ac-hero-text {
+    padding-bottom: 0;
+  }
+
+  .ac-stage {
+    padding: 30px 22px 34px;
+    border-radius: 0;
+  }
+
+  .ac-stage-body {
+    grid-template-columns: 1fr;
+  }
+
+  .ac-calendar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* On narrow screens the staircase turns on its side: bars get wider */
+@media (max-width: 720px) {
+  .ac-hero {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .ac-stairs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .ac-step {
+    width: var(--w);
+    height: auto;
+    flex: none;
+    border-radius: 0 12px 12px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    transform-origin: left;
+    animation-name: ac-grow;
+  }
+
+  .ac-bar-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ac-files li {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .ac-file-btn {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+@keyframes ac-grow {
+  from {
+    transform: scaleX(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ac-step {
+    animation: none;
+    transition: none;
+  }
+}

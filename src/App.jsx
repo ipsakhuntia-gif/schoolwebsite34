@@ -145,6 +145,8 @@ import PlaySchool from "./Playschool/PlaySchool.jsx";
 import SishuPrabesha from "./Playschool/SishuPrabesha.jsx";
 import PlayLearn from "./Playschool/PlayLearn.jsx";
 import Sampadaka from "./About/Sampadaka.jsx";
+import AchievementsPage from "./home/Achievements.jsx";
+
 
 function App() {
   return (
@@ -168,6 +170,8 @@ function App() {
         <Route path="/sishuprabesha" element={<SishuPrabesha />} />
         <Route path="/sishuprabesha/play-learn" element={<PlayLearn />} />
         <Route path="/playschool" element={<PlaySchool />} />
+        <Route path="/about-achievement" element={<AchievementsPage />} />
+
 
       </Routes>
       <Footer />

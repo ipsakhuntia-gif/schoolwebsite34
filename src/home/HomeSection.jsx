@@ -283,7 +283,7 @@ function ModernSchoolSlider() {
             textShadow: "0 4px 20px rgba(0,0,0,0.1)",
             color: "#1a1a1a"
           }}>
-           ସ୍ୱରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର
+          ସରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର
           </h1>
 
           <h3 style={{
@@ -327,13 +327,13 @@ function ModernSchoolSlider() {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text"
-              }}>  ସ୍ୱରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର</strong> ଦ୍ୱାରା ପରିଚାଳିତ।   <p style={{
+              }}>  ସରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର</strong> ଦ୍ୱାରା ପରିଚାଳିତ।   <p style={{
                 marginBottom: "1.5rem",
                 lineHeight: "1.8",
                 fontSize: "1.1rem",
                 color: "#4a4a4a"
               }}>
-                 ସ୍ୱରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର ସ୍କୁଲ୍ 1 ଏପ୍ରିଲ୍ 2017 ରେ ପ୍ରତିଷ୍ଠିତ
+                 ସରସ୍ୱତୀ ଶିକ୍ଷା ମନ୍ଦିର ସ୍କୁଲ୍ 1 ଏପ୍ରିଲ୍ 2017 ରେ ପ୍ରତିଷ୍ଠିତ
                 ହୋଇ, ଶ୍ରୀ ଜୟଦେବ ଶିକ୍ଷା କେନ୍ଦ୍ର ଟ୍ରଷ୍ଟ ଦ୍ୱାରା ପରିଚାଳିତ
                 ହେଉଛି। ସ୍ଥାପନା ସମୟରେ କେବଳ 30 ଛାତ୍ରଛାତ୍ରୀ ଏବଂ
                 4 ଜଣ ଶିକ୍ଷକ ସହିତ ଯାତ୍ରା ଆରମ୍ଭ କରିଥିଲେ, ଆଜି

@@ -1,5 +1,4 @@
 
-
 // src/components/Navbar.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +7,7 @@ import logo from "../assets/image/schoollogo.png";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false); // mobile hamburger
   const wrapperRef = useRef(null);
 
   const toggleDropdown = (menu) => {
@@ -29,11 +29,22 @@ const Navbar = () => {
   // Optional keyboard: close on Escape
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === "Escape") setActiveDropdown(null);
+      if (e.key === "Escape") {
+        setActiveDropdown(null);
+        setMenuOpen(false);
+      }
     };
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, []);
+
+  // Close the mobile menu after any link is clicked
+  const handleLinkClick = (e) => {
+    if (e.target.closest("a")) {
+      setMenuOpen(false);
+      setActiveDropdown(null);
+    }
+  };
 
   return (
     <nav className="navbar">
@@ -43,8 +54,27 @@ const Navbar = () => {
         </Link>
       </div>
 
+      {/* Hamburger button (visible only on small screens) */}
+      <button
+        type="button"
+        className={`menu-toggle ${menuOpen ? "is-open" : ""}`}
+        onClick={() => setMenuOpen((o) => !o)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        aria-controls="main-menu"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
       {/* wrap nav in ref so outside clicks can be detected */}
-      <ul className="nav-links" ref={wrapperRef}>
+      <ul
+        id="main-menu"
+        className={`nav-links ${menuOpen ? "open" : ""}`}
+        ref={wrapperRef}
+        onClick={handleLinkClick}
+      >
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -79,7 +109,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li role="none">
-                <Link role="menuitem" to="/about#achievement">
+                <Link role="menuitem" to="/about-achievement">
                   Achievement
                 </Link>
               </li>

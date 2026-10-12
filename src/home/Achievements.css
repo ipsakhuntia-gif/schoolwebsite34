@@ -1,0 +1,167 @@
+.achievements-page {
+  background: #f7f8fc;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+/* Hero */
+.ach-hero {
+  text-align: center;
+  padding-top: 120px;
+  color: #fff;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.ach-hero h1 {
+  font-size: 2.6rem;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+
+.ach-hero p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Stats */
+.ach-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: -35px auto 0;
+  padding: 0 20px;
+}
+
+.ach-stat {
+  flex: 1 1 200px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.ach-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.ach-stat-label {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Section */
+.ach-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 70px;
+}
+
+/* Filters */
+.ach-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.ach-filter-btn {
+  border: 1px solid #1e3a8a;
+  background: transparent;
+  color: #1e3a8a;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ach-filter-btn:hover,
+.ach-filter-btn.active {
+  background: #1e3a8a;
+  color: #fff;
+}
+
+/* Grid */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+
+.ach-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.ach-card-image {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: #dbe4f5;
+}
+
+.ach-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.ach-card-body {
+  padding: 18px 20px 22px;
+}
+
+.ach-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #3b82f6;
+}
+
+.ach-card-body h3 {
+  margin: 8px 0 10px;
+  font-size: 1.15rem;
+  color: #1f2937;
+}
+
+.ach-card-body p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+.ach-empty {
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .ach-hero h1 {
+    font-size: 2rem;
+  }
+}
