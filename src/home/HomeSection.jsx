@@ -1,11 +1,16 @@
 
 import React, { useEffect, useState, useRef } from "react";
+import schoolImg from "../assets/image/school.png";
+import staff1 from "../assets/image/home1.jpeg";
+import staff2 from "../assets/image/home2.jpeg";
+
+
 
 // Sample school images - replace with your actual school images
 const images = [
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop", // Classroom
-  "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop", // Students studying
-  "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&h=400&fit=crop", // School building
+  schoolImg, // Classroom
+  staff1, // Students studying
+  staff2, // School building
 ];
 
 const imageDescriptions = [
@@ -22,6 +27,16 @@ function ModernSchoolSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState('next');
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth <= 768
+  );
+
+  // Screen size tracking (for mobile layout)
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   // Scroll animation
   useEffect(() => {
@@ -93,7 +108,7 @@ function ModernSchoolSlider() {
     minHeight: "100vh",
     background: "#ffffff",
     color: "#333333",
-    padding: "80px 20px",
+    padding: isMobile ? "40px 16px 80px" : "80px 20px",
     fontFamily: "'Inter', 'Segoe UI', sans-serif",
     position: "relative",
     overflow: "hidden"
@@ -115,19 +130,20 @@ function ModernSchoolSlider() {
 
   const homeContainerStyle = {
     display: "flex",
-    alignItems: "center",
+    flexDirection: isMobile ? "column" : "row",
+    alignItems: isMobile ? "stretch" : "center",
     justifyContent: "space-between",
     maxWidth: "1200px",
     margin: "0 auto",
-    gap: "60px",
+    gap: isMobile ? "40px" : "60px",
     flexWrap: "wrap",
     position: "relative",
     zIndex: 2
   };
 
   const homeLeftStyle = {
-    flex: 1,
-    minWidth: "350px",
+    flex: isMobile ? "none" : 1,
+    minWidth: 0,
     // background:"red",
     opacity: leftVisible ? 1 : 0,
     transform: leftVisible ? "translateY(0)" : "translateY(50px)",
@@ -135,11 +151,11 @@ function ModernSchoolSlider() {
   };
 
   const homeRightStyle = {
-    flex: 1,
+    flex: isMobile ? "none" : 1,
     display: "flex",
     justifyContent: "center",
     position: "relative",
-    minWidth: "400px",
+    minWidth: 0,
     opacity: rightVisible ? 1 : 0,
     transform: rightVisible ? "translateY(0)" : "translateY(50px)",
     transition: "all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -149,7 +165,7 @@ function ModernSchoolSlider() {
     position: "relative",
     width: "100%",
     maxWidth: "500px",
-    height: "400px",
+    height: isMobile ? "280px" : "400px",
     perspective: "1000px"
   };
 
@@ -208,7 +224,7 @@ function ModernSchoolSlider() {
     left: 0,
     right: 0,
     background: "linear-gradient(transparent, rgba(0,0,0,0.7))",
-    padding: "30px",
+    padding: isMobile ? "20px" : "30px",
     zIndex: 5
   };
 
@@ -299,7 +315,7 @@ function ModernSchoolSlider() {
           <div style={{
             background: "rgba(0,0,0,0.02)",
             border: "2px solid #e5e7eb",
-            padding: "30px",
+            padding: isMobile ? "20px" : "30px",
             borderRadius: "20px",
             // boxShadow: "0 8px 32px rgba(0,0,0,0.1)"
           }}>
@@ -315,7 +331,7 @@ function ModernSchoolSlider() {
               ସଂସ୍ଥା ବିଷୟରେ
             </h2>
 
-            <p style={{
+            <div style={{
               marginBottom: "1.5rem",
               lineHeight: "1.8",
               fontSize: "1.1rem",
@@ -367,7 +383,7 @@ function ModernSchoolSlider() {
                 ଦେଉଛି।
               </p>
 
-            </p>
+            </div>
 
           </div>
         </div>
@@ -408,7 +424,7 @@ function ModernSchoolSlider() {
 
             {/* Navigation Controls */}
             <div
-              style={{ ...controlsStyle, left: "-25px" }}
+              style={{ ...controlsStyle, left: isMobile ? "8px" : "-25px" }}
               onClick={prevSlide}
               onMouseEnter={(e) => {
                 e.target.style.background = "rgba(0,0,0,0.2)";
@@ -423,7 +439,7 @@ function ModernSchoolSlider() {
             </div>
 
             <div
-              style={{ ...controlsStyle, right: "-25px" }}
+              style={{ ...controlsStyle, right: isMobile ? "8px" : "-25px" }}
               onClick={nextSlide}
               onMouseEnter={(e) => {
                 e.target.style.background = "rgba(0,0,0,0.2)";

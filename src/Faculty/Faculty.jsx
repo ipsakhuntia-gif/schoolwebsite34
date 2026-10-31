@@ -92,18 +92,17 @@ const faculties = [
   { id: 2, name: "Prof. Anita", department: "Mathematics", workExperience: "7 Years", image: null, hue: 215 },
   { id: 3, name: "Dr. Meena", department: "Physics", workExperience: "12 Years", image: null, hue: 265 },
   { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  { id: 4, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
-  
+  { id: 5, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 6, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 7, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 8, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 9, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 10, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 11, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 12, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 13, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 14, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 },
+  { id: 15, name: "Dr. Rajesh", department: "Chemistry", workExperience: "10 Years", image: null, hue: 160 }
 ];
 
 const MAX_TICKS = 15;
